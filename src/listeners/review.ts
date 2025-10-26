@@ -35,7 +35,7 @@ export class ReviewListener {
                     .setTitle('✅ Application Accepted')
                     .setDescription(listToString([
                         `${interaction.user} has accepted your application for **${prettyCategory}**.`,
-                        'Please open a ticket in <#1323823180057673841> to proceed with the next stage.'
+                        `Please open a ticket in <#${config.ticketChannel}> to proceed with the next stage.`
                     ]))
                     .setColor('Green');
                 

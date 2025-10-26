@@ -10,6 +10,7 @@ export interface Config {
     ticketAccessRole: string;
     applicationLogs: string;
     applicationLogs2: string;
+    ticketChannel: string;
     categories: Category[];
     applicationPanelEmbed: ApplicationPanelEmbed;
 }
