@@ -1,0 +1,61 @@
+{
+    "token": "token",
+    "mainGuild": "",
+    "ticketCategory": "",
+    "ticketAccessRole": "",
+    "applicationLogs": "",
+    "applicationLogs2": "",
+    "applicationPanelEmbed": {
+        "title": "PoisonBox Applications",
+        "description": "Thank you for your interest in joining the PoisonBox staff team.\n### Requirements:\n> Must be at least 14 years old\n> Should have a good understanding of Minecraft and be familiar with server gameplay\n> Be able to speak good and understandable English\n> Be active, respectful and willing to help other members\n> Should have basic skills to cheat check (ss)\n\nIf you meet the criteria and are eager to contribute to the PoisonBox community, we encourage you to apply.\nPlease select the appropriate application form below to get started.",
+        "color": "#6216aa"
+    },
+    "categories": [
+        {
+            "id": "apply_staff_eng",
+            "name": "Staff Application [ENG]",
+            "description": "Apply for staff position",
+            "questions": [
+                "1. What is your IGN (In-Game Name)?",
+                "2. How old are you?",
+                "3. Do you have premium version of Java Minecraft?",
+                "4. What is your timezone?",
+                "5. Do you have a microphone?",
+                "6. What languages do you speak?",
+                "7. Why do you want to be staff?",
+                "8. Have you ever been a staff member on other servers? If so, which ones, what was the highest rank you achieved, and why are you no longer a staff member?",
+                "9. How many hours can you spend daily/weekly for our server?",
+                "10. What experience do you have with moderating on Minecraft servers?",
+                "11. What commands or plugins are you familiar with? Please list and briefly describe them.",
+                "12. Situation #1: UserX reports UserY for cheating. How would you handle this situation?",
+                "13. Situation #2: You are fighting UserX in an area where the only escape is by using the `/spawn` command. Meanwhile, UserY starts spamming and swearing in chat. How would you handle this situation, considering that you cannot use commands while in combat?",
+                "14. How do you handle conflicts or disagreements with other staff or players?",
+                "15. Situation #3: UserX and UserY get into an argument and start flooding the chat with their drama. How would you handle this situation?",
+                "16. Anything else you would like to add?"
+            ]
+        },
+        {
+            "id": "apply_staff_bg",
+            "name": "Staff Application [BG]",
+            "description": "Кандидатствайте за позиция в екипа",
+            "questions": [
+                "1. Какъв е вашият IGN (In-Game Name)?",
+                "2. На колко години сте?",
+                "3. Имате ли премиум версия на Java Minecraft?",
+                "4. В коя часова зона се намирате?",
+                "5. Имате ли микрофон?",
+                "6. Какви езици говорите?",
+                "7. Защо искате да станете част от екипа?",
+                "8. Били ли сте някога част от екипа на други сървъри? Ако да, кои, какъв беше най-високият ранг, който сте постигнали, и защо вече не сте част от екипа?",
+                "9. Колко часа можете да отделяте дневно/седмично за нашия сървър?",
+                "10. Какъв опит имате с модериране на Minecraft сървъри?",
+                "11. С кои команди или плъгини сте запознати? Моля, избройте ги и ги опишете накратко.",
+                "12. Ситуация #1: ИграчX докладва ИграчY за измама. Как бихте постъпили в тази ситуация?",
+                "13. Ситуация #2: Биете се с ИграчX в зона, където единственият изход е чрез командата `/spawn`. Междувременно ИграчY започва да спами и псува в чата. Как бихте реагирали, като имате предвид, че не можете да използвате команди по време на combat?",
+                "14. Как се справяте с конфликти или несъгласия с други членове на екипа или играчи?",
+                "15. Ситуация #3: ИграчX и ИграчY започват спор и заливат чата с драма. Как бихте реагирали?",
+                "16. Има ли нещо друго, което искате да добавите?"
+            ]
+        }
+    ]
+}

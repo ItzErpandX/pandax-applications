@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = "file:./dev.db"
+}
+
+model User {
+    id String @id
+
+    blacklisted Boolean @default(false)
+
+    updatedAt DateTime @default(now())
+    createdAt DateTime @default(now())
+}
+
+model Session {
+    id Int @id @default(autoincrement())
+
+    userId String
+
+    category       String
+    answers        Answer[]
+    lastQuestionId String
+
+    updatedAt DateTime @default(now())
+    createdAt DateTime @default(now())
+}
+
+model Answer {
+    id Int @id @default(autoincrement())
+
+    session   Session? @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+    sessionId Int
+
+    question String
+    answer   String
+
+    updatedAt DateTime @default(now())
+    createdAt DateTime @default(now())
+}
+
+model Application {
+    id Int @id @default(autoincrement())
+
+    userId String
+
+    category  String
+    responses Response[]
+    status    String
+
+    updatedAt DateTime @default(now())
+    createdAt DateTime @default(now())
+    statusChangedAt DateTime?
+    statusChangedBy String?
+}
+
+model Response {
+    id Int @id @default(autoincrement())
+
+    question String
+    answer   String
+
+    application   Application? @relation(fields: [applicationId], references: [id])
+    applicationId Int
+
+    updatedAt DateTime @default(now())
+    createdAt DateTime @default(now())
+}
