@@ -105,7 +105,7 @@ export class ReviewListener {
                         .setDescription(
                             `Congratulations, ${member.user}!\n` +
                             `Your application for **${prettyCategory}** has been accepted.\n` +
-                            `Please open a ticket in <#1323823180057673841> to proceed with the next stage.`
+                            `Please open a ticket in <#${config.ticketChannel}> to proceed with the next stage.`
                         )
                         .setThumbnail(member.user.displayAvatarURL({ size: 1024 }))
                         .setFooter({ 
@@ -218,9 +218,11 @@ export class ReviewListener {
                 const embed = new EmbedBuilder()
                     .setTitle('❌ Application Denied')
                     .setDescription(listToString([
-                        `${interaction.user} has denied your application for **${prettyCategory}**.`,
-                        `### Reason:`,
-                        `\`\`\`${reason}\`\`\``
+                        `${interaction.user} has denied your application for **${prettyCategory}**.\n` +
+                        `### Reason:\n` +
+                        `\`\`\`\n` +
+                        `${reason}\n` +
+                        `\`\`\``
                     ]))
                     .setColor('Red');
 
@@ -249,7 +251,7 @@ export class ReviewListener {
                 };
                 const reasonField = {
                     name: 'Reason',
-                    value: `\`\`\`${reason}\`\`\``,
+                    value: `\`\`\`\n${reason}\n\`\`\``,
                     inline: false
                 };
 
@@ -295,8 +297,10 @@ export class ReviewListener {
                         .setDescription(
                             `We're sorry, ${member.user}.\n` +
                             `Your application for **${prettyCategory}** has been denied.\n` +
-                            `### Reason:` +
-                            `\`\`\`${reason}\`\`\``
+                            `### Reason:\n` +
+                            `\`\`\`\n` +
+                            `${reason}\n` +
+                            `\`\`\``
                         )
                         .setThumbnail(member.user.displayAvatarURL({ size: 1024 }))
                         .setFooter({ 
